@@ -1,0 +1,46 @@
+/* GLOBAL THEME VARIABLES */
+:root {
+  /* Default Dark Mode (Deep Navy Base) */
+  --bg-primary: #020617;
+  --bg-secondary: #1e293b;
+  --text-primary: #f8fafc;   /* White text */
+  --text-secondary: #94a3b8; /* Grey text */
+  --accent-color: #5252d4;   /* Default Purple */
+  --border-color: #334155;
+  --card-bg: #1e293b;
+  
+  /* Status Colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #eb1736;
+}
+
+/* Light Mode Overrides - FORCE PRIORITY */
+html[data-theme="light"] {
+  --bg-primary: #f8fafc;     /* White Background */
+  --bg-secondary: #ffffff;   /* White Cards */
+  --text-primary: #0f172a;   /* Dark Navy Text */
+  --text-secondary: #475569; /* Slate Text */
+  --accent-color: #5252d4;
+  --border-color: #e2e8f0;
+  --card-bg: #ffffff;
+}
+
+/* Base Resets */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  /* This creates the smooth fade between Day/Night */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button { font-family: 'Inter', sans-serif; }
+
+/* Global Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
